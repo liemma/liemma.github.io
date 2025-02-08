@@ -1,4 +1,7 @@
 /* General Styling */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
