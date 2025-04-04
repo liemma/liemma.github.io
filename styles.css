@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f5f5fa; /* Soft neutral background */
+    background-color: #f4f7fb; /* Soft neutral background */
     line-height: 1.6;
     text-align: center;
 }
@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: #5d5f84; /* Muted indigo */
+    background: #1a2a49; /* Dark navy */
     color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -47,7 +47,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #d1d0e4; /* Light soft hover */
+    color: #cfd5e1; /* Light soft hover */
 }
 
 /* Hero Section */
@@ -62,7 +62,7 @@ nav ul li a:hover {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #7a78a6; /* Soft indigo */
+    border: 4px solid #1a2a49; /* Match navy */
     margin-bottom: 20px;
 }
 
@@ -85,6 +85,10 @@ section {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #1a2a49;
 }
 
 /* Projects Section */
@@ -113,12 +117,12 @@ section {
 .project h3 {
     margin-bottom: 5px;
     font-size: 1.2rem;
-    color: #5f5a94; /* Muted violet */
+    color: #1a2a49;
     transition: color 0.3s ease;
 }
 
 .project h3:hover {
-    color: #403d68;
+    color: #3f4166;
 }
 
 .project .description {
@@ -127,55 +131,12 @@ section {
     margin-top: 5px;
 }
 
-/* Experience Section */
-.experience {
-    background: #f4f4f8;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.06);
-}
-
-.experience h3 {
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    color: #5f5a94;
-}
-
-/* Contact Section */
-#contact ul {
-    list-style: none;
-    padding: 0;
-}
-
-#contact ul li {
-    margin: 10px 0;
-}
-
-#contact ul li a {
-    text-decoration: none;
-    color: #5d5f84;
-    font-weight: bold;
-}
-
-#contact ul li a:hover {
-    text-decoration: underline;
-    color: #3f4166;
-}
-
-/* Footer */
-footer {
-    padding: 15px;
-    background: #5d5f84;
-    color: #fff;
-    font-size: 0.9rem;
-}
-/* Timeline Styling */
+/* Experience Section - Timeline Style */
 .timeline {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-left: 3px solid #d8d8e8; /* muted grayish lavender */
+    border-left: 3px solid #1a2a49;
     padding-left: 1.5rem;
     margin-top: 1.5rem;
     position: relative;
@@ -183,37 +144,38 @@ footer {
 
 .timeline-item {
     position: relative;
-    background: #f9f9fc; /* soft off-white */
+    background: #f6f1ed; /* Soft stone/beige */
     padding: 16px 22px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     text-align: left;
+    max-width: 600px;
 }
 
 .timeline-item::before {
     content: "";
     position: absolute;
     left: -1.1rem;
-    top: 1.1rem;
+    top: 1.2rem;
     width: 0.75rem;
     height: 0.75rem;
-    background-color: #7a78a6; /* soft indigo */
+    background-color: #1a2a49;
     border: 2px solid #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #d8d8e8;
+    box-shadow: 0 0 0 2px #cfd5e1;
 }
 
 .timeline-item h3 {
     margin-top: 0;
     margin-bottom: 8px;
     font-size: 1.2rem;
-    color: #5d5f84; /* muted header */
+    color: #1a2a49;
 }
 
 .timeline-item p {
     margin: 0;
     font-weight: 600;
-    color: #555;
+    color: #333;
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
@@ -228,4 +190,33 @@ footer {
 .timeline-item ul li {
     margin-bottom: 0.4rem;
     line-height: 1.5;
+}
+
+/* Contact Section */
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin: 10px 0;
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: #1a2a49;
+    font-weight: bold;
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+    color: #3f4166;
+}
+
+/* Footer */
+footer {
+    padding: 15px;
+    background: #1a2a49;
+    color: #fff;
+    font-size: 0.9rem;
 }
