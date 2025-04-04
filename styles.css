@@ -127,21 +127,6 @@ section {
     margin-top: 5px;
 }
 
-/* Experience Section */
-.experience {
-    background: #efe9fc;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.experience h3 {
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    color: #9c88ff;
-}
-
 /* Contact Section */
 #contact ul {
     list-style: none;
@@ -169,3 +154,64 @@ footer {
     color: #fff;
     font-size: 0.9rem;
 }
+
+/* Updated Experience Section - Timeline Style */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-left: 3px solid #d3c1ff;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    background: #efe9fc;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.1rem;
+    top: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #9c88ff;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #d3c1ff;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #9c88ff;
+}
+
+.timeline-item p {
+    margin: 0;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.timeline-item ul li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
