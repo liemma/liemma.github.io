@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f8f3fc;
+    background-color: #f5f5fa; /* Soft neutral background */
     line-height: 1.6;
     text-align: center;
 }
@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: #9c88ff;
+    background: #5d5f84; /* Muted indigo */
     color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -47,13 +47,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #b8a1ff;
+    color: #d1d0e4; /* Light soft hover */
 }
 
 /* Hero Section */
 #hero {
     padding: 50px 20px;
-    background: #dcd6f7;
+    background: #f0f1f7; /* Calm bluish gray */
     text-align: center;
 }
 
@@ -62,14 +62,14 @@ nav ul li a:hover {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #9c88ff;
+    border: 4px solid #7a78a6; /* Soft indigo */
     margin-bottom: 20px;
 }
 
 #hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #4a4a4a;
+    color: #3a3a4a;
 }
 
 #hero p {
@@ -82,26 +82,26 @@ section {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Projects Section */
 .project {
-    background: #efe9fc;
+    background: #f4f4f8;
     padding: 15px;
     margin: 20px 0;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.12);
     cursor: pointer;
-    background: #e0d0ff;
+    background: #ebebf2;
 }
 
 .project a {
@@ -113,18 +113,33 @@ section {
 .project h3 {
     margin-bottom: 5px;
     font-size: 1.2rem;
-    color: #9c88ff;
+    color: #5f5a94; /* Muted violet */
     transition: color 0.3s ease;
 }
 
 .project h3:hover {
-    color: #6b5ca8;
+    color: #403d68;
 }
 
 .project .description {
     color: #555;
     font-size: 0.9rem;
     margin-top: 5px;
+}
+
+/* Experience Section */
+.experience {
+    background: #f4f4f8;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.experience h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #5f5a94;
 }
 
 /* Contact Section */
@@ -139,28 +154,28 @@ section {
 
 #contact ul li a {
     text-decoration: none;
-    color: #9c88ff;
+    color: #5d5f84;
     font-weight: bold;
 }
 
 #contact ul li a:hover {
     text-decoration: underline;
+    color: #3f4166;
 }
 
 /* Footer */
 footer {
     padding: 15px;
-    background: #9c88ff;
+    background: #5d5f84;
     color: #fff;
     font-size: 0.9rem;
 }
-
-/* Updated Experience Section - Timeline Style */
+/* Timeline Styling */
 .timeline {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-left: 3px solid #d3c1ff;
+    border-left: 3px solid #d8d8e8; /* muted grayish lavender */
     padding-left: 1.5rem;
     margin-top: 1.5rem;
     position: relative;
@@ -168,10 +183,10 @@ footer {
 
 .timeline-item {
     position: relative;
-    background: #efe9fc;
-    padding: 15px 20px;
+    background: #f9f9fc; /* soft off-white */
+    padding: 16px 22px;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
     text-align: left;
 }
 
@@ -179,20 +194,20 @@ footer {
     content: "";
     position: absolute;
     left: -1.1rem;
-    top: 1rem;
+    top: 1.1rem;
     width: 0.75rem;
     height: 0.75rem;
-    background-color: #9c88ff;
-    border: 2px solid white;
+    background-color: #7a78a6; /* soft indigo */
+    border: 2px solid #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #d3c1ff;
+    box-shadow: 0 0 0 2px #d8d8e8;
 }
 
 .timeline-item h3 {
     margin-top: 0;
     margin-bottom: 8px;
     font-size: 1.2rem;
-    color: #9c88ff;
+    color: #5d5f84; /* muted header */
 }
 
 .timeline-item p {
@@ -214,4 +229,3 @@ footer {
     margin-bottom: 0.4rem;
     line-height: 1.5;
 }
-
