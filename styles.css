@@ -220,3 +220,39 @@ footer {
     color: #fff;
     font-size: 0.9rem;
 }
+
+header {
+    background-color: #f7faff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #3b82f6;
+  }
+  
