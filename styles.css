@@ -40,42 +40,50 @@ a {
 
 /* Header Styling */
 header {
-    background-color: #f7faff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 20px 40px;
+    background: #ffffff; /* clean white or light background */
+    border-bottom: 1px solid #e5e7eb; /* subtle bottom border */
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.logo {
+  }
+  
+  .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2c3e50;
-}
-
-nav ul {
+    color: #1e3a8a;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 0;
     padding: 0;
-}
-
-nav a {
-    text-decoration: none;
+  }
+  
+  nav li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
     color: #1e3a8a;
+    text-decoration: none;
     font-weight: 500;
+    font-family: 'Fira Code', monospace;
     transition: color 0.2s ease-in-out;
-}
-
-nav a:hover {
-    color: #3b82f6;
-}
-
+  }
+  
+  nav a:hover {
+    color: #475569; /* nice techy blue */
+  }
+  
+  
 /* Hero Section */
 #hero {
     background: #ffffff; /* full-width white box */
@@ -106,7 +114,6 @@ nav a:hover {
     max-width: 700px;
     margin: 0 auto;
   }
-  
   
   
 /*Profile pic*/
