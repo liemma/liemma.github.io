@@ -462,6 +462,39 @@ header {
   content: '// ';
 }
 
+/* Photo block — floats beside the about text so the prose wraps around it. */
+.photo {
+  float: right;
+  width: 232px;
+  max-width: 42%;
+  margin: 4px 0 18px 26px;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.photo figcaption {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.photo figcaption::before {
+  content: '// ';
+}
+
+/* Coursework sits below the float rather than beside it. */
+#about h3 {
+  clear: both;
+}
+
 /* Coursework chips */
 
 .course-tags {
@@ -876,6 +909,13 @@ footer {
 
   .role-line {
     font-size: 0.95rem;
+  }
+
+  .photo {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 0 20px;
   }
 
   .commits {
