@@ -4,240 +4,452 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emma Li</title>
+    <meta name="description" content="Emma Li — software engineer focused on backend systems and machine learning. M.S. Computer Science at Columbia.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      // Runs before first paint so the correct theme is applied with no flash.
+      // Dark is the default when the visitor has no stored preference.
+      (function () {
+        var stored = null;
+        try { stored = localStorage.getItem('theme'); } catch (e) {}
+        document.documentElement.setAttribute('data-theme', stored || 'dark');
+      })();
+    </script>
 </head>
 <body>
+    <div id="scroll-progress"></div>
+
     <header>
-        <div class="logo">EL</div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo">emma-li</div>
+        <button id="theme-toggle" type="button" aria-label="Switch color theme">
+          <span id="theme-icon" aria-hidden="true">☾</span>
+        </button>
     </header>
 
+    <main class="terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-title">~/emma-li — zsh</span>
+      </div>
 
-    <div class="site-wrapper">
+      <div class="tabbar" role="tablist" aria-label="Sections">
+        <button class="tab" role="tab" id="tab-whoami"     aria-controls="whoami"     data-pane="whoami">whoami</button>
+        <button class="tab" role="tab" id="tab-about"      aria-controls="about"      data-pane="about">about</button>
+        <button class="tab" role="tab" id="tab-experience" aria-controls="experience" data-pane="experience">experience</button>
+        <button class="tab" role="tab" id="tab-projects"   aria-controls="projects"   data-pane="projects">projects</button>
+        <button class="tab" role="tab" id="tab-contact"    aria-controls="contact"    data-pane="contact">contact</button>
+      </div>
 
-    <section id="hero">
-        <div class="hero-box">
-          <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
-          <h1>Hi, I'm Emma!</h1>
-          <p>Welcome to my portfolio. <br> Check out my projects and connect with me!</p>
-        </div>
-      </section>
-      
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm Emma. I earned my B.S. in Computer Engineering from Columbia University and am now finishing my M.S. in Computer Science there, specializing in Machine Learning, with graduation this December 2026. I’m passionate about software engineering, AI, and building products that combine strong technical systems with meaningful real-world impact. I’m currently a Software Engineer Intern at DoorDash in the NYC office, where I work on the Pharmacy and Regulated Goods team building HIPAA-compliant payment infrastructure for prescription delivery.
-        </p>
-        
-        <p>
+      <div class="terminal-body">
+
+        <!-- ------------------------------------------------------ whoami -->
+        <section class="pane" id="whoami" role="tabpanel" aria-labelledby="tab-whoami" tabindex="0">
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> whoami</p>
+          <img src="images/headshot.jpg" alt="Emma Li" class="profile-pic" width="150" height="150">
+          <h1>Emma Li</h1>
+          <p class="role-line">
+            <span id="typed-role" aria-hidden="true"></span><span class="cursor" aria-hidden="true"></span>
+            <span class="sr-only">Software engineer working on backend systems and machine learning.</span>
+          </p>
+          <p class="hero-tagline">
+            Backend and ML engineering, with a soft spot for systems that touch
+            real people. Most recently built payments infrastructure at DoorDash.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-goto="experience">view experience</button>
+            <a class="btn" href="https://github.com/liemma" target="_blank" rel="noopener noreferrer">github</a>
+            <a class="btn" href="https://www.linkedin.com/in/emmaqli/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          </div>
+        </section>
+
+        <!-- ------------------------------------------------------- about -->
+        <section class="pane" id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0" hidden>
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> cat about.md</p>
+          <p>
+            Hi! I'm Emma. I earned my B.S. in Computer Engineering from Columbia University and am now finishing my M.S. in Computer Science there, specializing in Machine Learning, with graduation this December 2026. I’m passionate about software engineering, AI, and building products that combine strong technical systems with meaningful real-world impact. I most recently interned as a Software Engineer at DoorDash in the NYC office, where I worked on the Pharmacy and Regulated Goods team building HIPAA-compliant payment infrastructure for prescription delivery.
+          </p>
+          <p>
             I’m interested in full-stack and backend engineering, AI-powered applications, distributed systems, and product-focused development. My technical skills include React, React Native, TypeScript, Next.js, JavaScript, HTML, CSS, Python, C, Java, and modern web and mobile development frameworks. I’m currently looking for 2027 new grad software engineering opportunities following my December 2026 graduation.
-        </p>
-        
-        <p>
+          </p>
+          <p>
             Originally from Stillwater, Oklahoma, I also enjoy exploring interdisciplinary areas like computational biology and healthcare technology. Outside of tech, I enjoy gaming, playing the clarinet and piano, photography, video editing, and trying new foods. In my free time, you’ll probably find me drinking boba, searching for the best froyo spots in NYC, or grinding Valorant (currently Ascendant, but still aiming for Immortal).
-        </p>
+          </p>
 
-
-        <h3>Relevant Coursework</h3>
-<ul class="course-tags">
-  <li>Artificial Intelligence</li>
-  <li>Computer Networks</li>
-  <li>Computer Architecture</li>
-  <li>C++</li>
-  <li>Circuit Analysis</li>
-  <li>Databases</li>
-  <li>Electronic Circuits</li>
-  <li>Embedded Systems</li>
-  <li>Natural Language Processing</li>
-  <li>Operating Systems</li>
-  <li>User Interface Design</li>
-  <li>Advanced Programming in C</li>
-</ul>
-    </section>
-
-    <section id="experience">
-    <h2>Experience</h2>
-
-    <div class="timeline">
-        <div class="timeline-item fade-in-section">
-          <h3>
-            <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer">
-              Software Engineer Intern - DoorDash
-            </a>
-          </h3>
-          <p><strong>May 2026 – Aug 2026 • New York, NY</strong></p>
-          <ul>
-            <li>Contributed to the design and implementation of HIPAA-compliant payment infrastructure for DoorDash’s pharmacy delivery product, including proto contracts, database schema, and a red/green zone architecture for regulated payment data.</li>
-            <li>Built three gRPC endpoints for patient payment method storage and transaction processing using Go, Protocol Buffers, and Stripe’s API with fingerprint-based deduplication.</li>
-            <li>Validated production readiness through guardrail tests, Kaizen tests, and observability instrumentation.</li>
+          <h3>relevant coursework</h3>
+          <ul class="course-tags">
+            <li>Artificial Intelligence</li>
+            <li>Computer Networks</li>
+            <li>Computer Architecture</li>
+            <li>C++</li>
+            <li>Circuit Analysis</li>
+            <li>Databases</li>
+            <li>Electronic Circuits</li>
+            <li>Embedded Systems</li>
+            <li>Natural Language Processing</li>
+            <li>Operating Systems</li>
+            <li>User Interface Design</li>
+            <li>Advanced Programming in C</li>
           </ul>
-        </div>
+        </section>
 
-        
-        <div class="timeline-item fade-in-section">
-          <h3>
-            <a href="https://navirahealth.org" target="_blank" rel="noopener noreferrer">
-              Founding Software Engineer – Navira Health
-            </a>
-          </h3>
-          <p><strong>Sep 2025 – Present • New York, NY</strong></p>
-          <ul>
-            <li>Developing backend services for an AI-powered healthcare navigation chatbot that guides newcomers through the U.S. healthcare system.</li>
-            <li>Implementing APIs and data pipelines on AWS to support LLM fine-tuning, multilingual queries, and real-time insurance guidance.</li>
-            <li>Designing system architecture and CI/CD pipelines to enable scalable feature iteration and enterprise-ready infrastructure.</li>
-          </ul>
-        </div>
+        <!-- -------------------------------------------------- experience -->
+        <section class="pane" id="experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> ls experience/</p>
 
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="item-head">
+                <img class="org-mark" src="images/doordash.svg" alt="DoorDash" height="26">
+                <h3>
+                    <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer">
+                      Software Engineer Intern — DoorDash
+                    </a>
+                  </h3>
+                  <p class="meta">May 2026 – Aug 2026 • New York, NY</p>
+              </div>
+              <ul>
+                <li>Contributed to the design and implementation of HIPAA-compliant payment infrastructure for DoorDash’s pharmacy delivery product, including proto contracts, database schema, and a red/green zone architecture for regulated payment data.</li>
+                <li>Built three gRPC endpoints for patient payment method storage and transaction processing using Go, Protocol Buffers, and Stripe’s API with fingerprint-based deduplication.</li>
+                <li>Validated production readiness through guardrail tests, Kaizen tests, and observability instrumentation.</li>
+              </ul>
+            </div>
 
-        <div class="timeline-item fade-in-section">
-          <h3>Software Engineer Intern – The Humor Project</h3>
-          <p><strong>May 2025 – Aug 2025 • New York, NY</strong></p>
-          <ul>
-            <li>Developed a humor-generation web app, <a href="https://crackd.ai" target="_blank">Crackd.ai</a>, where users select humor flavors like “Barnard,” “NYU,” or “Brainrot” to generate AI captions for photos.</li>
-            <li>Built the frontend using React and styled-components, with a backend powered by Node.js, OpenAI API, and Supabase for image-caption storage.</li>
-            <li>Integrated file uploads via S3 and built a tagging system to track humor flavor usage and customize prompt transformation via edge functions.</li>
-          </ul>
-        </div>
+            <div class="timeline-item">
+              <div class="item-head">
+                <span class="org-mark org-text">Navira Health</span>
+                <h3>
+                    <a href="https://navirahealth.org" target="_blank" rel="noopener noreferrer">
+                      Founding Software Engineer — Navira Health
+                    </a>
+                  </h3>
+                  <p class="meta">Sep 2025 – Dec 2025 • New York, NY</p>
+              </div>
+              <ul>
+                <li>Developing backend services for an AI-powered healthcare navigation chatbot that guides newcomers through the U.S. healthcare system.</li>
+                <li>Implementing APIs and data pipelines on AWS to support LLM fine-tuning, multilingual queries, and real-time insurance guidance.</li>
+                <li>Designing system architecture and CI/CD pipelines to enable scalable feature iteration and enterprise-ready infrastructure.</li>
+              </ul>
+            </div>
 
-        <div class="timeline-item fade-in-section"">
-            <h3>Head Teaching Assistant - Columbia University</h3>
-            <p><strong>September 2024 – Present • New York, NY</strong></p>
-            <ul>
-                <li>Head TA for CSEE 3827 (Fall 2024 + Spring 2025)</li>
+            <div class="timeline-item">
+              <div class="item-head">
+                <span class="org-mark org-text">The Humor Project</span>
+                <h3>Software Engineer Intern — The Humor Project</h3>
+                  <p class="meta">May 2025 – Aug 2025 • New York, NY</p>
+              </div>
+              <ul>
+                <li>Developed a humor-generation web app, <a href="https://crackd.ai" target="_blank" rel="noopener noreferrer">Crackd.ai</a>, where users select humor flavors like “Barnard,” “NYU,” or “Brainrot” to generate AI captions for photos.</li>
+                <li>Built the frontend using React and styled-components, with a backend powered by Node.js, OpenAI API, and Supabase for image-caption storage.</li>
+                <li>Integrated file uploads via S3 and built a tagging system to track humor flavor usage and customize prompt transformation via edge functions.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="item-head">
+                <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+                <h3>Head Teaching Assistant — Columbia University</h3>
+                  <p class="meta">Sep 2024 – Present • New York, NY</p>
+              </div>
+              <ul>
+                <li>Head TA for CSEE 3827 (Fall 2024 + Spring 2025).</li>
                 <li>Managed team of 15+ TAs and organized grades and assignments.</li>
-            </ul>
-        </div>
+              </ul>
+            </div>
 
-        <div class="timeline-item fade-in-section"">
-            <h3>Teaching Assistant - Columbia University</h3>
-            <p><strong>September 2022 – May 2024 • New York, NY</strong></p>
-            <ul>
+            <div class="timeline-item">
+              <div class="item-head">
+                <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+                <h3>Teaching Assistant — Columbia University</h3>
+                  <p class="meta">Sep 2022 – May 2024 • New York, NY</p>
+              </div>
+              <ul>
                 <li>Teaching Assistant for Artificial Intelligence, Discrete Mathematics, Fundamentals of Computer Systems, and Intro to Electrical Engineering.</li>
                 <li>Held weekly office hours, recitations, and review sessions.</li>
-            </ul>
-        </div>
+              </ul>
+            </div>
 
-        <div class="timeline-item fade-in-section"">
-            <h3>Undergraduate Researcher - Columbia Civil Engineering & Engineering Mechanics</h3>
-            <p><strong>May 2024 – August 2024 • New York, NY</strong></p>
-            <ul>
+            <div class="timeline-item">
+              <div class="item-head">
+                <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+                <h3>Undergraduate Researcher — Columbia Civil Engineering &amp; Engineering Mechanics</h3>
+                  <p class="meta">May 2024 – Aug 2024 • New York, NY</p>
+              </div>
+              <ul>
                 <li>Wrote C# scripts to extract trajectory data from MQTT messages.</li>
                 <li>Created a Unity-based VR environment simulating real-time vehicle and pedestrian movement at an intersection.</li>
                 <li>Integrated MQTT data streams with Unity for dynamic traffic visualizations.</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item fade-in-section"">
-            <h3>Undergraduate Researcher - Biomaterials Interface Tissue Engineering Lab</h3>
-            <p><strong>September 2022 – January 2023 • New York, NY</strong></p>
-            <ul>
-                <li>Conducted research on tissue scaffolds for periodontal ligament regeneration, including collagen assays and scaffold fabrication.</li>
-                <li>Assisted with experimental setup, media exchange, data collection over multi-day studies, and literature review.</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item fade-in-section"">
-            <h3>Customer Service Attendant - Dodge Fitness Center</h3>
-            <p><strong>September 2021 – May 2024 • New York, NY</strong></p>
-            <ul>
-                <li>Greeted visitors, enforced access policies, and managed reservations.</li>
-                <li>Handled laundry services and provided equipment support to members.</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-    
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project fade-in-section">
-          <h3><a href="https://valorantwordle.vercel.app" target="_blank">Valordle</a></h3>
-          <p>A browser-based Wordle clone themed around Valorant. Built using React, JavaScript, and Vite, it includes letter feedback, emoji-based result sharing, and custom gaming word lists.</p>
-        </div>
-        <div class="project fade-in-section">
-          <h3><a href="https://github.com/liemma/columbia-dorms" target="_blank">LionRate</a></h3>
-          <p>A full-stack website for Columbia students to browse, rate, and review on-campus dorms. Built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL, featuring dynamic dorm pages and real-time rating updates.</p>
-        </div>
-        <div class="project fade-in-section">
-              <h3><a href="https://github.com/liemma/cineverse" target="_blank">Cineverse</a></h3>
-              <p>A mobile movie browsing app built with React Native and Expo. Allows users to search for movies, view detailed information, and save favorites. Integrated with TMDb API for real-time movie data, and designed with a sleek, responsive interface for a smooth user experience across devices.</p>
+              </ul>
             </div>
-        <div class="project fade-in-section">
-            <h3><a href="https://piano-web-app-eta.vercel.app/" target="_blank">Virtual Piano Practice App</a></h3>
-            <p>Developed an interactive web app to teach basic piano skills, using a Flask backend and a JavaScript frontend. Built a playable virtual piano interface using HTML/CSS and mapped keyboard inputs to notes with HTML5 Audio API. Included real-time music quizzes to assess note identification accuracy and track progress.</p>
-          </div>
-        
-          <div class="project fade-in-section">
-            <h3><a href="https://github.com/CSEE4840/FinalPacman" target="_blank">Pac-Man on FPGA</a></h3>
-            <p>Recreated the classic Pac-Man game on a DE1-SoC FPGA using SystemVerilog for VGA rendering and C for game logic. Developed hardware for tile-based graphics, sprite rendering, and PWM-based audio. Integrated memory-mapped I/O for real-time software-hardware communication and sprite updates.</p>
-          </div>
-        
-          <div class="project fade-in-section">
-            <h3><a href="https://github.com/liemma/SongVault" target="_blank">SongVault</a></h3>
-            <p>Built a full-stack web app for cataloging songs with search by title, writer, and artist. Created a Flask backend for song management and a jQuery-powered frontend for real-time updates and interactive search functionality.</p>
-          </div>
-          <div class="project fade-in-section">
-            <h3><a href="https://github.com/celinl1220/plt4115_project" target="_blank">Music Notation Compiler</a></h3>
-            <p>A programming language designed to simplify music composition through code. It enables users to define melodies, harmonies, and musical structures using an intuitive syntax. Supports key signatures, time signatures, note sequences, and transformations like transposition and harmonization.</p>
-          </div>
-        
-          <div class="project fade-in-section">
-            <h3>Maze Joystick Controlled Game</h3>
-            <p>Developed an interactive labyrinth game controlled by an Arduino-powered joystick. Constructed a physical maze using cardboard walls on a plywood base and integrated servo motors to tilt it in two planes based on joystick input.</p>
-          </div>
-        </div>
-    
-    </section>
 
-    
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Let's connect! Reach me via email or find me on GitHub.</p>
-        <ul>
-            <li>Email: lemma75@gmail.com</li>
-            <li>Linkedin: <a href="https://www.linkedin.com/in/emmaqli/">emmaqli</a></li>
-            <li>GitHub: <a href="https://github.com/liemma">liemma</a></li>
+          </div>
+        </section>
 
-        </ul>
-    </section>
-    </div>
-    
+        <!-- ---------------------------------------------------- projects -->
+        <section class="pane" id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> ls projects/</p>
+
+          <div class="filters" id="project-filters" role="group" aria-label="Filter projects by technology"></div>
+
+          <div class="projects-grid" id="projects-grid">
+            <div class="project" data-tags="React,JavaScript">
+              <h3><a href="https://valorantwordle.vercel.app" target="_blank" rel="noopener noreferrer">Valordle</a></h3>
+              <p>A browser-based Wordle clone themed around Valorant. Built using React, JavaScript, and Vite, it includes letter feedback, emoji-based result sharing, and custom gaming word lists.</p>
+              <div class="project-tags"><span>React</span><span>JavaScript</span><span>Vite</span></div>
+            </div>
+
+            <div class="project" data-tags="Next.js,TypeScript">
+              <h3><a href="https://github.com/liemma/columbia-dorms" target="_blank" rel="noopener noreferrer">LionRate</a></h3>
+              <p>A full-stack website for Columbia students to browse, rate, and review on-campus dorms. Built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL, featuring dynamic dorm pages and real-time rating updates.</p>
+              <div class="project-tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div>
+            </div>
+
+            <div class="project" data-tags="React Native,JavaScript">
+              <h3><a href="https://github.com/liemma/cineverse" target="_blank" rel="noopener noreferrer">Cineverse</a></h3>
+              <p>A mobile movie browsing app built with React Native and Expo. Allows users to search for movies, view detailed information, and save favorites. Integrated with TMDb API for real-time movie data, and designed with a sleek, responsive interface for a smooth user experience across devices.</p>
+              <div class="project-tags"><span>React Native</span><span>Expo</span><span>JavaScript</span></div>
+            </div>
+
+            <div class="project" data-tags="Python,JavaScript">
+              <h3><a href="https://piano-web-app-eta.vercel.app/" target="_blank" rel="noopener noreferrer">Virtual Piano Practice App</a></h3>
+              <p>Developed an interactive web app to teach basic piano skills, using a Flask backend and a JavaScript frontend. Built a playable virtual piano interface using HTML/CSS and mapped keyboard inputs to notes with HTML5 Audio API. Included real-time music quizzes to assess note identification accuracy and track progress.</p>
+              <div class="project-tags"><span>Python</span><span>Flask</span><span>JavaScript</span></div>
+            </div>
+
+            <div class="project" data-tags="C,Hardware">
+              <h3><a href="https://github.com/CSEE4840/FinalPacman" target="_blank" rel="noopener noreferrer">Pac-Man on FPGA</a></h3>
+              <p>Recreated the classic Pac-Man game on a DE1-SoC FPGA using SystemVerilog for VGA rendering and C for game logic. Developed hardware for tile-based graphics, sprite rendering, and PWM-based audio. Integrated memory-mapped I/O for real-time software-hardware communication and sprite updates.</p>
+              <div class="project-tags"><span>SystemVerilog</span><span>C</span><span>FPGA</span></div>
+            </div>
+
+            <div class="project" data-tags="Python,JavaScript">
+              <h3><a href="https://github.com/liemma/SongVault" target="_blank" rel="noopener noreferrer">SongVault</a></h3>
+              <p>Built a full-stack web app for cataloging songs with search by title, writer, and artist. Created a Flask backend for song management and a jQuery-powered frontend for real-time updates and interactive search functionality.</p>
+              <div class="project-tags"><span>Python</span><span>Flask</span><span>jQuery</span></div>
+            </div>
+
+            <div class="project" data-tags="Compilers">
+              <h3><a href="https://github.com/celinl1220/plt4115_project" target="_blank" rel="noopener noreferrer">Music Notation Compiler</a></h3>
+              <p>A programming language designed to simplify music composition through code. It enables users to define melodies, harmonies, and musical structures using an intuitive syntax. Supports key signatures, time signatures, note sequences, and transformations like transposition and harmonization.</p>
+              <div class="project-tags"><span>Compilers</span><span>Language Design</span></div>
+            </div>
+
+            <div class="project" data-tags="Hardware">
+              <h3>Maze Joystick Controlled Game</h3>
+              <p>Developed an interactive labyrinth game controlled by an Arduino-powered joystick. Constructed a physical maze using cardboard walls on a plywood base and integrated servo motors to tilt it in two planes based on joystick input.</p>
+              <div class="project-tags"><span>Arduino</span><span>Hardware</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ----------------------------------------------------- contact -->
+        <section class="pane" id="contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0" hidden>
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> cat contact.md</p>
+          <p>Let's connect! Reach me via email or find me on GitHub.</p>
+          <ul class="contact-list">
+            <li><span class="label">email</span><a href="mailto:lemma75@gmail.com">lemma75@gmail.com</a></li>
+            <li><span class="label">linkedin</span><a href="https://www.linkedin.com/in/emmaqli/" target="_blank" rel="noopener noreferrer">emmaqli</a></li>
+            <li><span class="label">github</span><a href="https://github.com/liemma" target="_blank" rel="noopener noreferrer">liemma</a></li>
+          </ul>
+          <p class="hint">Currently looking for 2027 new grad software engineering roles.</p>
+        </section>
+
+      </div>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Emma Li.</p>
+        <p>&copy; 2026 Emma Li — built from scratch, no frameworks.</p>
     </footer>
 
     <script>
-        const faders = document.querySelectorAll('.fade-in-section');
-      
-        const appearOnScroll = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-            } else {
-              entry.target.classList.remove('is-visible'); // reset when out of view
+      (function () {
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---- Theme toggle ------------------------------------------------ */
+        var root = document.documentElement;
+        var toggle = document.getElementById('theme-toggle');
+        var icon = document.getElementById('theme-icon');
+
+        function paintIcon() {
+          icon.textContent = root.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+        }
+        paintIcon();
+
+        toggle.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          paintIcon();
+        });
+
+        /* ---- Scroll progress ---------------------------------------------
+           Declared before the tab code because show() calls updateProgress()
+           during initialisation.                                          */
+        var progress = document.getElementById('scroll-progress');
+        var ticking = false;
+
+        function updateProgress() {
+          var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+          progress.style.width = scrollable > 4
+            ? (window.scrollY / scrollable) * 100 + '%'
+            : '0%';
+          ticking = false;
+        }
+
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(updateProgress);
+          }
+        }, { passive: true });
+
+        /* ---- Tabbed panes ------------------------------------------------
+           One pane is visible at a time. The active pane is mirrored into the
+           URL hash so links and the back button keep working.              */
+        var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+        var panes = Array.prototype.slice.call(document.querySelectorAll('.pane'));
+        var names = tabs.map(function (t) { return t.dataset.pane; });
+
+        function show(name, focusTab) {
+          if (names.indexOf(name) === -1) name = names[0];
+
+          tabs.forEach(function (tab) {
+            var on = tab.dataset.pane === name;
+            tab.setAttribute('aria-selected', on ? 'true' : 'false');
+            tab.tabIndex = on ? 0 : -1;
+            tab.classList.toggle('active', on);
+            if (on && focusTab) tab.focus();
+          });
+
+          panes.forEach(function (pane) {
+            var on = pane.id === name;
+            pane.hidden = !on;
+            if (on && !reduceMotion) {
+              // Restart the entry animation each time the pane is shown.
+              pane.classList.remove('pane-enter');
+              void pane.offsetWidth;
+              pane.classList.add('pane-enter');
             }
           });
-        }, {
-          threshold: 0.1
+
+          if (history.replaceState) {
+            history.replaceState(null, '', '#' + name);
+          } else {
+            location.hash = name;
+          }
+          window.scrollTo({ top: 0, behavior: 'auto' });
+          updateProgress();
+        }
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () { show(tab.dataset.pane); });
         });
-      
-        faders.forEach(fader => appearOnScroll.observe(fader));
-      </script>
-      
-      
-      
+
+        // Left/right arrows move between tabs, per the ARIA tabs pattern.
+        document.querySelector('.tabbar').addEventListener('keydown', function (e) {
+          var i = names.indexOf(document.activeElement.dataset && document.activeElement.dataset.pane);
+          if (i === -1) return;
+          var next = null;
+          if (e.key === 'ArrowRight') next = names[(i + 1) % names.length];
+          if (e.key === 'ArrowLeft') next = names[(i - 1 + names.length) % names.length];
+          if (e.key === 'Home') next = names[0];
+          if (e.key === 'End') next = names[names.length - 1];
+          if (next) { e.preventDefault(); show(next, true); }
+        });
+
+        // Buttons elsewhere on the page that jump to a pane.
+        document.querySelectorAll('[data-goto]').forEach(function (el) {
+          el.addEventListener('click', function () { show(el.dataset.goto); });
+        });
+
+        window.addEventListener('hashchange', function () {
+          show((location.hash || '').replace('#', ''));
+        });
+
+        show((location.hash || '').replace('#', ''));
+
+        /* ---- Hero typing effect ------------------------------------------ */
+        var roles = [
+          'software engineer',
+          'former SWE intern @ DoorDash',
+          'M.S. CS @ Columbia, ML track',
+          'backend + distributed systems',
+          'clarinet, piano, and boba enthusiast'
+        ];
+        var typed = document.getElementById('typed-role');
+
+        if (reduceMotion) {
+          typed.textContent = roles[0];
+        } else {
+          var roleIndex = 0;
+          var charIndex = 0;
+          var deleting = false;
+
+          (function tick() {
+            var role = roles[roleIndex];
+            charIndex += deleting ? -1 : 1;
+            typed.textContent = role.slice(0, charIndex);
+
+            var delay = deleting ? 35 : 70;
+            if (!deleting && charIndex === role.length) {
+              delay = 1900;          // hold the finished phrase
+              deleting = true;
+            } else if (deleting && charIndex === 0) {
+              deleting = false;
+              roleIndex = (roleIndex + 1) % roles.length;
+              delay = 350;
+            }
+            setTimeout(tick, delay);
+          })();
+        }
+
+        /* ---- Project tag filters ----------------------------------------- */
+        var grid = document.getElementById('projects-grid');
+        var filterBar = document.getElementById('project-filters');
+        var cards = Array.prototype.slice.call(grid.querySelectorAll('.project'));
+
+        // Build the chip list from the tags actually present on the cards, so
+        // adding a project with a new tag needs no change here.
+        var tags = [];
+        cards.forEach(function (card) {
+          (card.dataset.tags || '').split(',').forEach(function (tag) {
+            tag = tag.trim();
+            if (tag && tags.indexOf(tag) === -1) tags.push(tag);
+          });
+        });
+        tags.sort();
+
+        function makeChip(label, pressed) {
+          var chip = document.createElement('button');
+          chip.type = 'button';
+          chip.className = 'filter-chip';
+          chip.textContent = label;
+          chip.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+          chip.addEventListener('click', function () { applyFilter(label, chip); });
+          filterBar.appendChild(chip);
+          return chip;
+        }
+
+        function applyFilter(label, chip) {
+          Array.prototype.forEach.call(filterBar.children, function (other) {
+            other.setAttribute('aria-pressed', other === chip ? 'true' : 'false');
+          });
+          cards.forEach(function (card) {
+            var match = label === 'all' ||
+              (card.dataset.tags || '').split(',').map(function (t) {
+                return t.trim();
+              }).indexOf(label) !== -1;
+            card.classList.toggle('filtered-out', !match);
+          });
+        }
+
+        makeChip('all', true);
+        tags.forEach(function (tag) { makeChip(tag, false); });
+      })();
+    </script>
 </body>
 </html>
