@@ -20,6 +20,7 @@
   --accent-hover: #0d5f59;
   --accent-soft: rgba(15, 118, 110, 0.1);
   --meta: #a16207;
+  --add: #15803d;
 
   --shadow-sm: 0 1px 2px rgba(27, 36, 48, 0.06);
   --shadow-md: 0 4px 16px rgba(27, 36, 48, 0.08);
@@ -49,6 +50,7 @@
     --accent-hover: #99f6e4;
     --accent-soft: rgba(94, 234, 212, 0.12);
     --meta: #fbbf24;
+    --add: #4ade80;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.45);
@@ -71,6 +73,7 @@
   --accent-hover: #99f6e4;
   --accent-soft: rgba(94, 234, 212, 0.12);
   --meta: #fbbf24;
+  --add: #4ade80;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.45);
@@ -500,22 +503,133 @@ header {
 }
 
 /* ==========================================================================
-   Experience timeline
+   Experience — styled as `git log` output
    ========================================================================== */
 
-.timeline {
+.commits {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 2rem;
+  margin-top: 1.75rem;
   border-left: 1px solid var(--border);
-  padding-left: 1.75rem;
-  margin-top: 1.5rem;
+  padding-left: 1.9rem;
+}
+
+.commit {
   position: relative;
 }
 
-/* Employer lockup. Real logo files sit on their own line above the role, so
-   the slot can hold either a square mark or a wide wordmark. Orgs without a
-   logo file fall back to a text wordmark of matching weight. */
+/* The commit node on the graph rail. */
+.commit::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.9rem - 5px);
+  top: 0.42rem;
+  width: 9px;
+  height: 9px;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+}
+
+.commit-line {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.hash {
+  color: var(--meta);
+  font-weight: 500;
+}
+
+.hash::before {
+  content: 'commit ';
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+.refs {
+  color: var(--text-faint);
+  margin-left: 8px;
+}
+
+.ref-head {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.ref-tag {
+  color: var(--meta);
+}
+
+.commit .org-mark {
+  margin: 0 0 10px;
+}
+
+.commit h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.commit .meta {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+  max-width: none;
+}
+
+.commit .k {
+  color: var(--text-faint);
+  display: inline-block;
+  min-width: 4.2em;
+}
+
+/* Accomplishments read as added lines in a diff. */
+.diff {
+  list-style: none;
+  margin: 14px 0 12px;
+  padding: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.diff li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+
+.diff li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--add);
+}
+
+.stack {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  margin: 0;
+  max-width: none;
+}
+
+.stack .k {
+  color: var(--text-faint);
+  min-width: 0;
+  margin-right: 6px;
+}
+
+
 .item-head {
   margin-bottom: 14px;
 }
@@ -549,75 +663,6 @@ header {
   line-height: 1.6;
 }
 
-.timeline-item {
-  position: relative;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 20px 24px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s ease, transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.timeline-item:hover {
-  border-color: var(--border-strong);
-  transform: translateX(3px);
-  box-shadow: var(--shadow-md);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: calc(-1.75rem - 5px);
-  top: 26px;
-  width: 9px;
-  height: 9px;
-  background-color: var(--bg);
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-}
-
-.timeline-item h3 {
-  margin: 0 0 4px;
-  font-size: 1.02rem;
-  color: var(--text);
-  line-height: 1.4;
-}
-
-.timeline-item .meta {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--meta);
-  font-weight: 500;
-  margin: 0 0 12px;
-  letter-spacing: 0.01em;
-}
-
-.timeline-item ul {
-  margin: 0;
-  padding-left: 1.1rem;
-  color: var(--text-muted);
-  font-size: 0.94rem;
-}
-
-.timeline-item ul li {
-  margin-bottom: 0.45rem;
-  line-height: 1.65;
-}
-
-.timeline-item ul li::marker {
-  color: var(--accent);
-}
-
-.timeline-item .meta,
-.timeline-item ul {
-  font-family: var(--mono);
-}
-
-.timeline-item ul {
-  font-family: var(--sans);
-}
 
 /* ==========================================================================
    Projects
@@ -656,20 +701,20 @@ header {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 18px;
   align-items: start;
 }
 
+/* Each project is a small terminal pane: a `cat` command line above the
+   file's contents. */
 .project {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow-sm);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease,
     border-color 0.2s ease;
 }
@@ -680,21 +725,53 @@ header {
   box-shadow: var(--shadow-md);
 }
 
+.file-line {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--text-faint);
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 14px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-line .prompt {
+  color: var(--accent);
+  margin-right: 6px;
+  user-select: none;
+}
+
+.file-line .path {
+  color: var(--text-muted);
+}
+
+.project-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex: 1;
+}
+
 .project h3 {
-  font-size: 1rem;
+  font-size: 0.98rem;
   margin: 0;
 }
 
-.project h3::before {
-  content: '\25b8  ';
-  color: var(--accent);
+.project .ext {
+  font-size: 0.8em;
+  opacity: 0.7;
 }
 
 .project p {
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.7;
+  font-family: var(--sans);
 }
 
 .project-tags {
@@ -702,24 +779,28 @@ header {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: auto;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .project-tags span {
   font-family: var(--mono);
-  font-size: 0.71rem;
+  font-size: 0.7rem;
   color: var(--text-faint);
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  padding: 3px 8px;
-  border-radius: 5px;
+  padding: 2px 0;
+}
+
+.project-tags span::before {
+  content: '#';
+  color: var(--accent);
+  opacity: 0.65;
 }
 
 /* Hidden by the tag filter. Uses a class rather than inline styles so the
-   fade-in transition state is not clobbered. */
+   entry animation state is not clobbered. */
 .project.filtered-out {
   display: none;
 }
+
 
 /* ==========================================================================
    Contact
@@ -797,16 +878,18 @@ footer {
     font-size: 0.95rem;
   }
 
-  .timeline {
+  .commits {
     padding-left: 1.25rem;
+    gap: 1.75rem;
   }
 
-  .timeline-item {
-    padding: 16px 18px;
-  }
-
-  .timeline-item::before {
+  .commit::before {
     left: calc(-1.25rem - 5px);
+  }
+
+  .commit .k {
+    min-width: 0;
+    margin-right: 6px;
   }
 
   .projects-grid {

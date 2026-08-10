@@ -22,8 +22,8 @@ The active pane is mirrored into the URL hash via `history.replaceState`, so `#p
 
 Repeated content patterns:
 
-- **Experience** — `.timeline` wraps `.timeline-item` blocks. Each opens with an `.item-head` holding an `.org-mark` employer logo, then the `<h3>` title and a `<p class="meta">` date line in the form `Mon YYYY – Mon YYYY • City, ST`, then a `<ul>` of bullets. Most recent first. `.timeline-item::before` draws the timeline dot in CSS.
-- **Projects** — `.projects-grid` wraps `.project` cards: an `<h3>` link, a `<p>`, and a `.project-tags` row. Each card needs `data-tags="A,B"`. The filter chips above the grid are **generated from those attributes at runtime**, so a new tag needs no JS change; filtering toggles the `.filtered-out` class.
+- **Experience** — styled as `git log` output. `.commits` wraps `.commit` articles, each with a `.commit-line` (fake short hash, optional `.refs`), an `.org-mark` logo, `<h3>` role, `.meta` key/value lines, a `.diff` list whose items render as green `+` diff additions, and a `.stack` line. Most recent first; `.commit::before` draws the graph node.
+- **Projects** — `.projects-grid` wraps `.project` articles, each a miniature terminal pane: a `.file-line` header reading `$ cat <dir>/README.md`, then a `.project-body` with `<h3>` link, `<p>`, and a `.project-tags` row rendered as `#tag` chips. Each card needs `data-tags="A,B"`. The filter chips above the grid are **generated from those attributes at runtime**, so a new tag needs no JS change; filtering toggles `.filtered-out`.
 
 `.org-mark` is the employer logo slot. It holds either a real SVG (`images/doordash.svg`, `images/columbia.svg`) sized by a `height` attribute, or a `.org-text` span — a small-caps text wordmark — for orgs with no logo file. Monochrome marks carry `.mono`, which flips them to white in dark mode via a CSS filter; colored marks like DoorDash's are left alone because they read on both palettes.
 

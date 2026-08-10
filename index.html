@@ -99,93 +99,103 @@
 
         <!-- -------------------------------------------------- experience -->
         <section class="pane" id="experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
-          <p class="prompt-line"><span class="prompt">~/emma-li $</span> ls experience/</p>
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> git log --author="Emma Li" --stat</p>
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="item-head">
-                <img class="org-mark" src="images/doordash.svg" alt="DoorDash" height="26">
-                <h3>
-                    <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer">
-                      Software Engineer Intern — DoorDash
-                    </a>
-                  </h3>
-                  <p class="meta">May 2026 – Aug 2026 • New York, NY</p>
-              </div>
-              <ul>
+          <div class="commits">
+            <article class="commit">
+              <p class="commit-line">
+                <span class="hash">c7f19a2</span>
+                <span class="refs">(<span class="ref-head">HEAD -&gt; career</span>, <span class="ref-tag">tag: doordash</span>)</span>
+              </p>
+              <img class="org-mark" src="images/doordash.svg" alt="DoorDash" height="26">
+              <h3>
+                <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer">Software Engineer Intern · DoorDash</a>
+              </h3>
+              <p class="meta"><span class="k">Date:</span> May 2026 – Aug 2026 · New York, NY</p>
+              <p class="meta"><span class="k">Team:</span> Pharmacy &amp; Regulated Goods</p>
+              <ul class="diff">
                 <li>Contributed to the design and implementation of HIPAA-compliant payment infrastructure for DoorDash’s pharmacy delivery product, including proto contracts, database schema, and a red/green zone architecture for regulated payment data.</li>
                 <li>Built three gRPC endpoints for patient payment method storage and transaction processing using Go, Protocol Buffers, and Stripe’s API with fingerprint-based deduplication.</li>
                 <li>Validated production readiness through guardrail tests, Kaizen tests, and observability instrumentation.</li>
               </ul>
-            </div>
+              <p class="stack"><span class="k">stack:</span> Go · gRPC · Protocol Buffers · Stripe</p>
+            </article>
 
-            <div class="timeline-item">
-              <div class="item-head">
-                <span class="org-mark org-text">Navira Health</span>
-                <h3>
-                    <a href="https://navirahealth.org" target="_blank" rel="noopener noreferrer">
-                      Founding Software Engineer — Navira Health
-                    </a>
-                  </h3>
-                  <p class="meta">Sep 2025 – Dec 2025 • New York, NY</p>
-              </div>
-              <ul>
-                <li>Developing backend services for an AI-powered healthcare navigation chatbot that guides newcomers through the U.S. healthcare system.</li>
-                <li>Implementing APIs and data pipelines on AWS to support LLM fine-tuning, multilingual queries, and real-time insurance guidance.</li>
-                <li>Designing system architecture and CI/CD pipelines to enable scalable feature iteration and enterprise-ready infrastructure.</li>
+            <article class="commit">
+              <p class="commit-line">
+                <span class="hash">4b2e08d</span>
+              </p>
+              <span class="org-mark org-text">Navira Health</span>
+              <h3>
+                <a href="https://navirahealth.org" target="_blank" rel="noopener noreferrer">Founding Software Engineer · Navira Health</a>
+              </h3>
+              <p class="meta"><span class="k">Date:</span> Sep 2025 – Dec 2025 · New York, NY</p>
+              <ul class="diff">
+                <li>Developed backend services for an AI-powered healthcare navigation chatbot that guides newcomers through the U.S. healthcare system.</li>
+                <li>Implemented APIs and data pipelines on AWS to support LLM fine-tuning, multilingual queries, and real-time insurance guidance.</li>
+                <li>Designed system architecture and CI/CD pipelines to enable scalable feature iteration and enterprise-ready infrastructure.</li>
               </ul>
-            </div>
+              <p class="stack"><span class="k">stack:</span> AWS · LLMs · CI/CD</p>
+            </article>
 
-            <div class="timeline-item">
-              <div class="item-head">
-                <span class="org-mark org-text">The Humor Project</span>
-                <h3>Software Engineer Intern — The Humor Project</h3>
-                  <p class="meta">May 2025 – Aug 2025 • New York, NY</p>
-              </div>
-              <ul>
+            <article class="commit">
+              <p class="commit-line">
+                <span class="hash">9d61f43</span>
+              </p>
+              <span class="org-mark org-text">The Humor Project</span>
+              <h3>Software Engineer Intern · The Humor Project</h3>
+              <p class="meta"><span class="k">Date:</span> May 2025 – Aug 2025 · New York, NY</p>
+              <ul class="diff">
                 <li>Developed a humor-generation web app, <a href="https://crackd.ai" target="_blank" rel="noopener noreferrer">Crackd.ai</a>, where users select humor flavors like “Barnard,” “NYU,” or “Brainrot” to generate AI captions for photos.</li>
                 <li>Built the frontend using React and styled-components, with a backend powered by Node.js, OpenAI API, and Supabase for image-caption storage.</li>
                 <li>Integrated file uploads via S3 and built a tagging system to track humor flavor usage and customize prompt transformation via edge functions.</li>
               </ul>
-            </div>
+              <p class="stack"><span class="k">stack:</span> React · Node.js · OpenAI API · Supabase · S3</p>
+            </article>
 
-            <div class="timeline-item">
-              <div class="item-head">
-                <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
-                <h3>Head Teaching Assistant — Columbia University</h3>
-                  <p class="meta">Sep 2024 – Present • New York, NY</p>
-              </div>
-              <ul>
+            <article class="commit">
+              <p class="commit-line">
+                <span class="hash">e30c75b</span>
+              </p>
+              <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+              <h3>Head Teaching Assistant · Columbia University</h3>
+              <p class="meta"><span class="k">Date:</span> Sep 2024 – Present · New York, NY</p>
+              <ul class="diff">
                 <li>Head TA for CSEE 3827 (Fall 2024 + Spring 2025).</li>
                 <li>Managed team of 15+ TAs and organized grades and assignments.</li>
               </ul>
-            </div>
+              <p class="stack"><span class="k">course:</span> CSEE 3827 — Fundamentals of Computer Systems</p>
+            </article>
 
-            <div class="timeline-item">
-              <div class="item-head">
-                <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
-                <h3>Teaching Assistant — Columbia University</h3>
-                  <p class="meta">Sep 2022 – May 2024 • New York, NY</p>
-              </div>
-              <ul>
+            <article class="commit">
+              <p class="commit-line">
+                <span class="hash">1a58fe0</span>
+              </p>
+              <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+              <h3>Teaching Assistant · Columbia University</h3>
+              <p class="meta"><span class="k">Date:</span> Sep 2022 – May 2024 · New York, NY</p>
+              <ul class="diff">
                 <li>Teaching Assistant for Artificial Intelligence, Discrete Mathematics, Fundamentals of Computer Systems, and Intro to Electrical Engineering.</li>
                 <li>Held weekly office hours, recitations, and review sessions.</li>
               </ul>
-            </div>
+              <p class="stack"><span class="k">courses:</span> AI · Discrete Math · Computer Systems · Intro EE</p>
+            </article>
 
-            <div class="timeline-item">
-              <div class="item-head">
-                <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
-                <h3>Undergraduate Researcher — Columbia Civil Engineering &amp; Engineering Mechanics</h3>
-                  <p class="meta">May 2024 – Aug 2024 • New York, NY</p>
-              </div>
-              <ul>
+            <article class="commit">
+              <p class="commit-line">
+                <span class="hash">6c04b9e</span>
+                <span class="refs">(<span class="ref-tag">root-commit</span>)</span>
+              </p>
+              <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+              <h3>Undergraduate Researcher · Columbia Civil Engineering &amp; Engineering Mechanics</h3>
+              <p class="meta"><span class="k">Date:</span> May 2024 – Aug 2024 · New York, NY</p>
+              <ul class="diff">
                 <li>Wrote C# scripts to extract trajectory data from MQTT messages.</li>
                 <li>Created a Unity-based VR environment simulating real-time vehicle and pedestrian movement at an intersection.</li>
                 <li>Integrated MQTT data streams with Unity for dynamic traffic visualizations.</li>
               </ul>
-            </div>
-
+              <p class="stack"><span class="k">stack:</span> C# · Unity · MQTT · VR</p>
+            </article>
           </div>
         </section>
 
@@ -196,56 +206,79 @@
           <div class="filters" id="project-filters" role="group" aria-label="Filter projects by technology"></div>
 
           <div class="projects-grid" id="projects-grid">
-            <div class="project" data-tags="React,JavaScript">
-              <h3><a href="https://valorantwordle.vercel.app" target="_blank" rel="noopener noreferrer">Valordle</a></h3>
-              <p>A browser-based Wordle clone themed around Valorant. Built using React, JavaScript, and Vite, it includes letter feedback, emoji-based result sharing, and custom gaming word lists.</p>
-              <div class="project-tags"><span>React</span><span>JavaScript</span><span>Vite</span></div>
-            </div>
+            <article class="project" data-tags="React,JavaScript">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">valordle/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://valorantwordle.vercel.app" target="_blank" rel="noopener noreferrer">Valordle <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>A browser-based Wordle clone themed around Valorant. Built using React, JavaScript, and Vite, it includes letter feedback, emoji-based result sharing, and custom gaming word lists.</p>
+                <div class="project-tags"><span>react</span><span>javascript</span><span>vite</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="Next.js,TypeScript">
-              <h3><a href="https://github.com/liemma/columbia-dorms" target="_blank" rel="noopener noreferrer">LionRate</a></h3>
-              <p>A full-stack website for Columbia students to browse, rate, and review on-campus dorms. Built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL, featuring dynamic dorm pages and real-time rating updates.</p>
-              <div class="project-tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div>
-            </div>
+            <article class="project" data-tags="Next.js,TypeScript">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">lionrate/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://github.com/liemma/columbia-dorms" target="_blank" rel="noopener noreferrer">LionRate <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>A full-stack website for Columbia students to browse, rate, and review on-campus dorms. Built with Next.js, TypeScript, Tailwind CSS, and Supabase/PostgreSQL, featuring dynamic dorm pages and real-time rating updates.</p>
+                <div class="project-tags"><span>next.js</span><span>typescript</span><span>supabase</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="React Native,JavaScript">
-              <h3><a href="https://github.com/liemma/cineverse" target="_blank" rel="noopener noreferrer">Cineverse</a></h3>
-              <p>A mobile movie browsing app built with React Native and Expo. Allows users to search for movies, view detailed information, and save favorites. Integrated with TMDb API for real-time movie data, and designed with a sleek, responsive interface for a smooth user experience across devices.</p>
-              <div class="project-tags"><span>React Native</span><span>Expo</span><span>JavaScript</span></div>
-            </div>
+            <article class="project" data-tags="React Native,JavaScript">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">cineverse/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://github.com/liemma/cineverse" target="_blank" rel="noopener noreferrer">Cineverse <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>A mobile movie browsing app built with React Native and Expo. Search for movies, view details, and save favorites, backed by the TMDb API for real-time data with a responsive interface across devices.</p>
+                <div class="project-tags"><span>react-native</span><span>expo</span><span>javascript</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="Python,JavaScript">
-              <h3><a href="https://piano-web-app-eta.vercel.app/" target="_blank" rel="noopener noreferrer">Virtual Piano Practice App</a></h3>
-              <p>Developed an interactive web app to teach basic piano skills, using a Flask backend and a JavaScript frontend. Built a playable virtual piano interface using HTML/CSS and mapped keyboard inputs to notes with HTML5 Audio API. Included real-time music quizzes to assess note identification accuracy and track progress.</p>
-              <div class="project-tags"><span>Python</span><span>Flask</span><span>JavaScript</span></div>
-            </div>
+            <article class="project" data-tags="Python,JavaScript">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">piano-web-app/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://piano-web-app-eta.vercel.app/" target="_blank" rel="noopener noreferrer">Virtual Piano Practice App <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>An interactive web app teaching basic piano skills, with a Flask backend and JavaScript frontend. Maps keyboard input to notes via the HTML5 Audio API and runs real-time quizzes to track note-identification accuracy.</p>
+                <div class="project-tags"><span>python</span><span>flask</span><span>javascript</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="C,Hardware">
-              <h3><a href="https://github.com/CSEE4840/FinalPacman" target="_blank" rel="noopener noreferrer">Pac-Man on FPGA</a></h3>
-              <p>Recreated the classic Pac-Man game on a DE1-SoC FPGA using SystemVerilog for VGA rendering and C for game logic. Developed hardware for tile-based graphics, sprite rendering, and PWM-based audio. Integrated memory-mapped I/O for real-time software-hardware communication and sprite updates.</p>
-              <div class="project-tags"><span>SystemVerilog</span><span>C</span><span>FPGA</span></div>
-            </div>
+            <article class="project" data-tags="C,Hardware">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">pacman-fpga/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://github.com/CSEE4840/FinalPacman" target="_blank" rel="noopener noreferrer">Pac-Man on FPGA <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>The classic game recreated on a DE1-SoC FPGA, using SystemVerilog for VGA rendering and C for game logic. Custom hardware for tile graphics, sprite rendering, and PWM audio, with memory-mapped I/O tying software to hardware.</p>
+                <div class="project-tags"><span>systemverilog</span><span>c</span><span>fpga</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="Python,JavaScript">
-              <h3><a href="https://github.com/liemma/SongVault" target="_blank" rel="noopener noreferrer">SongVault</a></h3>
-              <p>Built a full-stack web app for cataloging songs with search by title, writer, and artist. Created a Flask backend for song management and a jQuery-powered frontend for real-time updates and interactive search functionality.</p>
-              <div class="project-tags"><span>Python</span><span>Flask</span><span>jQuery</span></div>
-            </div>
+            <article class="project" data-tags="Python,JavaScript">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">songvault/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://github.com/liemma/SongVault" target="_blank" rel="noopener noreferrer">SongVault <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>A full-stack web app for cataloging songs with search by title, writer, and artist. Flask backend for song management, with a jQuery frontend driving real-time updates and interactive search.</p>
+                <div class="project-tags"><span>python</span><span>flask</span><span>jquery</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="Compilers">
-              <h3><a href="https://github.com/celinl1220/plt4115_project" target="_blank" rel="noopener noreferrer">Music Notation Compiler</a></h3>
-              <p>A programming language designed to simplify music composition through code. It enables users to define melodies, harmonies, and musical structures using an intuitive syntax. Supports key signatures, time signatures, note sequences, and transformations like transposition and harmonization.</p>
-              <div class="project-tags"><span>Compilers</span><span>Language Design</span></div>
-            </div>
+            <article class="project" data-tags="Compilers">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">music-notation-lang/README.md</span></p>
+              <div class="project-body">
+                <h3><a href="https://github.com/celinl1220/plt4115_project" target="_blank" rel="noopener noreferrer">Music Notation Compiler <span class="ext" aria-hidden="true">↗</span></a></h3>
+                <p>A programming language for composing music through code. Defines melodies, harmonies, and structure with an intuitive syntax, supporting key and time signatures plus transformations like transposition and harmonization.</p>
+                <div class="project-tags"><span>compilers</span><span>language-design</span></div>
+              </div>
+            </article>
 
-            <div class="project" data-tags="Hardware">
-              <h3>Maze Joystick Controlled Game</h3>
-              <p>Developed an interactive labyrinth game controlled by an Arduino-powered joystick. Constructed a physical maze using cardboard walls on a plywood base and integrated servo motors to tilt it in two planes based on joystick input.</p>
-              <div class="project-tags"><span>Arduino</span><span>Hardware</span></div>
-            </div>
+            <article class="project" data-tags="Hardware">
+              <p class="file-line"><span class="prompt">$</span> cat <span class="path">maze-joystick/README.md</span></p>
+              <div class="project-body">
+                <h3>Maze Joystick Controlled Game</h3>
+                <p>An interactive labyrinth game driven by an Arduino-powered joystick. A physical maze of cardboard walls on a plywood base, tilted in two planes by servo motors responding to joystick input.</p>
+                <div class="project-tags"><span>arduino</span><span>hardware</span></div>
+              </div>
+            </article>
           </div>
         </section>
-
         <!-- ----------------------------------------------------- contact -->
         <section class="pane" id="contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0" hidden>
           <p class="prompt-line"><span class="prompt">~/emma-li $</span> cat contact.md</p>
