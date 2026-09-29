@@ -36,7 +36,7 @@ Two type families: `--mono` (Fira Code) for headings, UI chrome, the `whoami`/`a
 
 ## Favicon
 
-`favicon.svg` at the repo root, linked as `/favicon.svg` — root-absolute, which resolves both on `liemma.github.io` (a user page served from `/`) and on an apex custom domain. It is an "EL" monogram drawn as plain `<rect>`s on a 32-unit grid rather than `<text>`, so it needs no font and stays crisp at 16px. Its embedded `<style>` swaps the palette under `prefers-color-scheme`; browsers that ignore media queries in SVG favicons get the light pair, which reads on either tab strip.
+`favicon.svg` at the repo root, linked as `/favicon.svg` — root-absolute, which resolves both on `liemma.github.io` (a user page served from `/`) and on an apex custom domain. It is an "EL" monogram — letters only, no background tile — drawn as plain `<rect>`s on a 32-unit grid rather than `<text>`, so it needs no font and stays crisp at 16px. It is a single fixed teal sitting between the site's light and dark accents, deliberately *not* a `prefers-color-scheme` swap: with no tile the glyph carries its own contrast, and Chrome honours media queries inside SVG favicons inconsistently, so one color that reads on both a white and a dark tab strip is safer than a swap that may never fire.
 
 ## Gotchas
 

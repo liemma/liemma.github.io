@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="t">
+  <title id="t">EL — Emma Li</title>
+  <!-- One fixed teal, sitting between the site's light and dark accents.
+       With no tile the glyph carries its own contrast, and Chrome honours
+       prefers-color-scheme inside SVG favicons inconsistently — a single
+       color that reads on both a white and a dark tab strip is safer than
+       a swap that may never fire. -->
+  <g fill="#0d9488">
+    <!-- E -->
+    <rect x="2"  y="4"  width="5"  height="24"/>
+    <rect x="2"  y="4"  width="12" height="5"/>
+    <rect x="2"  y="13" width="10" height="5"/>
+    <rect x="2"  y="23" width="12" height="5"/>
+    <!-- L -->
+    <rect x="18" y="4"  width="5"  height="24"/>
+    <rect x="18" y="23" width="12" height="5"/>
+  </g>
+</svg>
