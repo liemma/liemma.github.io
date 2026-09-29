@@ -697,6 +697,115 @@ header {
 }
 
 
+/* Inline "jump to another pane" trigger — a button that reads as a link. */
+.inline-link {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.inline-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+
+/* ==========================================================================
+   Teaching — a columnar roster, read as tab-separated shell output
+   ========================================================================== */
+
+.roster {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+}
+
+.roster li {
+  display: grid;
+  grid-template-columns: 12rem 5.5rem minmax(0, 1fr) 10.5rem;
+  gap: 0 0.9rem;
+  padding: 11px 6px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: background-color 0.2s ease;
+}
+
+.roster li:not(.roster-head):hover {
+  background: var(--surface-hover);
+}
+
+.roster-head {
+  color: var(--text-faint);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+}
+
+.roster-head .r-term::before {
+  content: '# ';
+}
+
+.r-term {
+  color: var(--meta);
+}
+
+.roster-head .r-term {
+  color: var(--text-faint);
+}
+
+.r-role {
+  color: var(--text-faint);
+}
+
+.roster .current .r-role {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Marks the appointment currently in progress. */
+.roster .current .r-term::after {
+  content: ' ●';
+  color: var(--accent);
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+.r-course {
+  color: var(--text);
+}
+
+.r-course b {
+  color: var(--accent);
+  font-weight: 500;
+  margin-right: 0.5em;
+}
+
+.r-prof {
+  color: var(--text-faint);
+}
+
+.roster-summary {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  margin-top: 1rem;
+  max-width: none;
+}
+
+.roster-summary::before {
+  content: '// ';
+}
+
+#teaching .org-mark {
+  margin-bottom: 18px;
+}
+
+
 /* ==========================================================================
    Projects
    ========================================================================== */
@@ -934,6 +1043,28 @@ footer {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* The roster drops its columns and stacks each appointment as a block.
+     Qualified with li so it outranks the `.roster li { display: grid }` base
+     rule, which is one specificity point higher than `.roster-head` alone. */
+  .roster li.roster-head {
+    display: none;
+  }
+
+  .roster li {
+    grid-template-columns: auto 1fr;
+    gap: 3px 0.85rem;
+    padding: 14px 4px;
+  }
+
+  .roster .r-course,
+  .roster .r-prof {
+    grid-column: 1 / -1;
+  }
+
+  .roster .r-course {
+    margin-top: 4px;
   }
 }
 

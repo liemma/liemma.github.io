@@ -14,7 +14,7 @@ There is nothing to install or compile. Open `index.html` directly in a browser,
 
 ## Structure
 
-The site is a terminal-styled single page. Everything lives inside one `.terminal` window: a title bar, a `.tabbar`, and a `.terminal-body` holding five `.pane` sections — `whoami`, `about`, `experience`, `projects`, `contact`.
+The site is a terminal-styled single page. Everything lives inside one `.terminal` window: a title bar, a `.tabbar`, and a `.terminal-body` holding six `.pane` sections — `whoami`, `about`, `experience`, `teaching`, `projects`, `contact`.
 
 **Panes are tabs, not scroll targets.** Exactly one pane is visible; the rest carry the `hidden` attribute. The inline `<script>` at the bottom of `index.html` owns all of it. Adding a section means adding both a `.pane` section and a `.tab` button whose `data-pane` matches the pane's `id` — the script derives everything else from those two attributes.
 
@@ -23,6 +23,7 @@ The active pane is mirrored into the URL hash via `history.replaceState`, so `#p
 Repeated content patterns:
 
 - **Experience** — styled as `git log` output. `.commits` wraps `.commit` articles, each with a `.commit-line` (fake short hash, optional `.refs`), an `.org-mark` logo, `<h3>` role, `.meta` key/value lines, a `.diff` list whose items render as green `+` diff additions, and a `.stack` line. Most recent first; `.commit::before` draws the graph node.
+- **Teaching** — `.roster` is a `<ul>` whose items are CSS-grid rows: `.r-term`, `.r-role`, `.r-course`, `.r-prof`, with a `.roster-head` label row on top. Reverse-chronological; the in-progress appointment carries `.current`, which tints the role and appends a dot to the term. Under 780px the grid collapses to stacked blocks — note that rule hides the header as `.roster li.roster-head`, because the bare class loses to `.roster li` on specificity.
 - **Projects** — `.projects-grid` wraps `.project` articles, each a miniature terminal pane: a `.file-line` header reading `$ cat <dir>/README.md`, then a `.project-body` with `<h3>` link, `<p>`, and a `.project-tags` row rendered as `#tag` chips. Each card needs `data-tags="A,B"`. The filter chips above the grid are **generated from those attributes at runtime**, so a new tag needs no JS change; filtering toggles `.filtered-out`.
 
 `.org-mark` is the employer logo slot. It holds either a real SVG (`images/doordash.svg`, `images/columbia.svg`) sized by a `height` attribute, or a `.org-text` span — a small-caps text wordmark — for orgs with no logo file. Monochrome marks carry `.mono`, which flips them to white in dark mode via a CSS filter; colored marks like DoorDash's are left alone because they read on both palettes.
@@ -32,6 +33,10 @@ Repeated content patterns:
 Themed through CSS custom properties on `:root`. Light is the base palette; dark is redefined twice — under `@media (prefers-color-scheme: dark)` guarded by `:root:not([data-theme="light"])`, and again under `:root[data-theme="dark"]` so the toggle wins either way. **Never give a color its only definition inside one of those blocks.** A blocking script in `<head>` stamps `data-theme` before first paint (defaulting to dark) to avoid a flash.
 
 Two type families: `--mono` (Fira Code) for headings, UI chrome, the `whoami`/`about` panes, and meta lines; `--sans` for longer prose in the experience and project bodies, where monospace at paragraph length gets tiring.
+
+## Favicon
+
+`favicon.svg` at the repo root, linked as `/favicon.svg` — root-absolute, which resolves both on `liemma.github.io` (a user page served from `/`) and on an apex custom domain. It is an "EL" monogram drawn as plain `<rect>`s on a 32-unit grid rather than `<text>`, so it needs no font and stays crisp at 16px. Its embedded `<style>` swaps the palette under `prefers-color-scheme`; browsers that ignore media queries in SVG favicons get the light pair, which reads on either tab strip.
 
 ## Gotchas
 

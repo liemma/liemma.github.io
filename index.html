@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emma Li</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="description" content="Emma Li — software engineer focused on backend systems and machine learning. M.S. Computer Science at Columbia.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +42,7 @@
         <button class="tab" role="tab" id="tab-whoami"     aria-controls="whoami"     data-pane="whoami">whoami</button>
         <button class="tab" role="tab" id="tab-about"      aria-controls="about"      data-pane="about">about</button>
         <button class="tab" role="tab" id="tab-experience" aria-controls="experience" data-pane="experience">experience</button>
+        <button class="tab" role="tab" id="tab-teaching"   aria-controls="teaching"   data-pane="teaching">teaching</button>
         <button class="tab" role="tab" id="tab-projects"   aria-controls="projects"   data-pane="projects">projects</button>
         <button class="tab" role="tab" id="tab-contact"    aria-controls="contact"    data-pane="contact">contact</button>
       </div>
@@ -94,11 +96,14 @@
             <li>Computer Architecture</li>
             <li>C++</li>
             <li>Circuit Analysis</li>
+            <li>Computational Genomics</li>
             <li>Databases</li>
             <li>Electronic Circuits</li>
             <li>Embedded Systems</li>
+            <li>Machine Learning</li>
             <li>Natural Language Processing</li>
             <li>Operating Systems</li>
+            <li>Spoken Language Processing</li>
             <li>User Interface Design</li>
             <li>Advanced Programming in C</li>
           </ul>
@@ -162,34 +167,6 @@
 
             <article class="commit">
               <p class="commit-line">
-                <span class="hash">e30c75b</span>
-              </p>
-              <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
-              <h3>Head Teaching Assistant · Columbia University</h3>
-              <p class="meta"><span class="k">Date:</span> Sep 2024 – Present · New York, NY</p>
-              <ul class="diff">
-                <li>Head TA for CSEE 3827 (Fall 2024 + Spring 2025).</li>
-                <li>Managed team of 15+ TAs and organized grades and assignments.</li>
-              </ul>
-              <p class="stack"><span class="k">course:</span> CSEE 3827 — Fundamentals of Computer Systems</p>
-            </article>
-
-            <article class="commit">
-              <p class="commit-line">
-                <span class="hash">1a58fe0</span>
-              </p>
-              <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
-              <h3>Teaching Assistant · Columbia University</h3>
-              <p class="meta"><span class="k">Date:</span> Sep 2022 – May 2024 · New York, NY</p>
-              <ul class="diff">
-                <li>Teaching Assistant for Artificial Intelligence, Discrete Mathematics, Fundamentals of Computer Systems, and Intro to Electrical Engineering.</li>
-                <li>Held weekly office hours, recitations, and review sessions.</li>
-              </ul>
-              <p class="stack"><span class="k">courses:</span> AI · Discrete Math · Computer Systems · Intro EE</p>
-            </article>
-
-            <article class="commit">
-              <p class="commit-line">
                 <span class="hash">6c04b9e</span>
                 <span class="refs">(<span class="ref-tag">root-commit</span>)</span>
               </p>
@@ -204,6 +181,90 @@
               <p class="stack"><span class="k">stack:</span> C# · Unity · MQTT · VR</p>
             </article>
           </div>
+
+          <p class="hint">
+            teaching appointments live in
+            <button type="button" class="inline-link" data-goto="teaching">teaching</button>
+          </p>
+        </section>
+
+        <!-- ---------------------------------------------------- teaching -->
+        <section class="pane" id="teaching" role="tabpanel" aria-labelledby="tab-teaching" tabindex="0" hidden>
+          <p class="prompt-line"><span class="prompt">~/emma-li $</span> cat teaching/roster.tsv</p>
+
+          <img class="org-mark mono" src="images/columbia.svg" alt="Columbia University" height="22">
+
+          <ul class="diff">
+            <li>Led recitations, labs, and office hours for 300+ students in computer systems, electrical engineering, and AI courses.</li>
+            <li>Managed 15+ TAs for Fundamentals of Computer Systems, overseeing grading and course infrastructure.</li>
+          </ul>
+
+          <ul class="roster">
+            <li class="roster-head" aria-hidden="true">
+              <span class="r-term">term</span>
+              <span class="r-role">role</span>
+              <span class="r-course">course</span>
+              <span class="r-prof">instructor</span>
+            </li>
+
+            <li class="current">
+              <span class="r-term">fall 2026</span>
+              <span class="r-role">head ta</span>
+              <span class="r-course"><b>COMS 4701</b> Artificial Intelligence</span>
+              <span class="r-prof">Ansaf Salleb-Aouissi</span>
+            </li>
+
+            <li>
+              <span class="r-term">fall 2024 – spring 2025</span>
+              <span class="r-role">head ta</span>
+              <span class="r-course"><b>CSEE 3827</b> Fundamentals of Computer Systems</span>
+              <span class="r-prof">Martha Kim, Brian Plancher</span>
+            </li>
+
+            <li>
+              <span class="r-term">fall 2024</span>
+              <span class="r-role">ta</span>
+              <span class="r-course"><b>COMS 4701</b> Artificial Intelligence</span>
+              <span class="r-prof">Ansaf Salleb-Aouissi</span>
+            </li>
+
+            <li>
+              <span class="r-term">spring 2024</span>
+              <span class="r-role">ta</span>
+              <span class="r-course"><b>COMS 3203</b> Discrete Mathematics</span>
+              <span class="r-prof">Ansaf Salleb-Aouissi</span>
+            </li>
+
+            <li>
+              <span class="r-term">fall 2023</span>
+              <span class="r-role">ta</span>
+              <span class="r-course"><b>CSEE 3827</b> Fundamentals of Computer Systems</span>
+              <span class="r-prof">Martha Kim</span>
+            </li>
+
+            <li>
+              <span class="r-term">spring 2023</span>
+              <span class="r-role">ta</span>
+              <span class="r-course"><b>COMS 3203</b> Discrete Mathematics</span>
+              <span class="r-prof">Ansaf Salleb-Aouissi</span>
+            </li>
+
+            <li>
+              <span class="r-term">spring 2023</span>
+              <span class="r-role">la</span>
+              <span class="r-course"><b>ELEN 1201</b> Introduction to Electrical Engineering</span>
+              <span class="r-prof">David Vallancourt</span>
+            </li>
+
+            <li>
+              <span class="r-term">fall 2022</span>
+              <span class="r-role">la</span>
+              <span class="r-course"><b>ELEN 1201</b> Introduction to Electrical Engineering</span>
+              <span class="r-prof">David Vallancourt</span>
+            </li>
+          </ul>
+
+          <p class="roster-summary">8 appointments · 4 courses · 2 as head ta</p>
         </section>
 
         <!-- ---------------------------------------------------- projects -->
